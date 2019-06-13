@@ -5,8 +5,12 @@ import App from './App';
 import Game from './Game';
 import Garage from'./Garage';
 import * as serviceWorker from './serviceWorker';
-import Tick from './Tick'
-import Clock from './Clock'
+import Tick from './Tick';
+import Clock from './Clock';
+import Toggle from './Toggle';
+import Login from './Login';
+import Mailbox from './Mailbox';
+import Liste from './Liste';
 
 // function Tick2(){
 
@@ -23,8 +27,17 @@ import Clock from './Clock'
 // setInterval(Tick2, 1000);
 
 
+ReactDOM.render(<Login />, document.getElementById('root2'));
 ReactDOM.render(<Game />, document.getElementById('root'));
 ReactDOM.render(<Clock />, document.getElementById('popo'));
+// ReactDOM.render(<Toggle />, document.getElementById('popo2'));
+const numbers = [4,9,3,8,2];
+ReactDOM.render(<Liste numbers = {numbers} />, document.getElementById('popo3'));
+
+
+const messages = ['coucou jespere que tu passe une bonne journée', 're ca va', 'Aller ciao']
+
+ReactDOM.render(<Mailbox messageNonLus={messages}/>, document.getElementById('popo2'));
 // Ci dessous une maniere d'appeler un composant a partir d'une fonction 
 
 
